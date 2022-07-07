@@ -1,9 +1,13 @@
-package br.com.pedro.editora;
+package br.com.pedro.LibraryManager.editora;
 
-import java.net.URI;
+import java.net.URI; 
 import java.util.List;
 import java.util.Optional;
 
+import javax.persistence.EntityNotFoundException;
+
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -15,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import br.com.pedro.exceptions.ObjectNotFoundException;
+import br.com.pedro.LibraryManager.exceptions.ObjectNotFoundException;
 
 @RestController
 public class EditoraResource {
@@ -29,9 +33,16 @@ public class EditoraResource {
 	
 	@GetMapping("/editora/{id}")
 	public Editora buscarEditoraById(@PathVariable Long id){
-		Editora editora = editoraRepository.getReferenceById(id);
-					
-		return editora;
+		try {
+			Editora editora = editoraRepository.getReferenceById(id);
+			return editora;
+		}
+		catch(EntityNotFoundException e) {
+			return null;
+		}
+		catch(Exception e) {
+			throw e;
+		}
 	}
 	
 	@DeleteMapping("/editora/{id}")

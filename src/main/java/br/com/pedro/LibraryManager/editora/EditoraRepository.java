@@ -1,4 +1,4 @@
-package br.com.pedro.editora;
+package br.com.pedro.LibraryManager.editora;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

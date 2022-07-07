@@ -1,4 +1,4 @@
-package br.com.pedro.exceptions;
+package br.com.pedro.LibraryManager.exceptions;
 
 public class ObjectNotFoundException extends RuntimeException {
 

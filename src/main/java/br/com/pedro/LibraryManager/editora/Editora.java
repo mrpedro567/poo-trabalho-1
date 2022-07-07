@@ -1,4 +1,4 @@
-package br.com.pedro.editora;
+package br.com.pedro.LibraryManager.editora;
 
 import javax.persistence.*;
 
