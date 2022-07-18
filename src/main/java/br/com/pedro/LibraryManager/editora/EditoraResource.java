@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import br.com.pedro.LibraryManager.exceptions.ObjectNotFoundException;
 
 @RestController
 public class EditoraResource {
