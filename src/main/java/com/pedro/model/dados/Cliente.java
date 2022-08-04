@@ -8,20 +8,40 @@ public class Cliente extends Pessoa{
 	private String endereco;
 	private Calendar nascimento;
 	private List<Emprestimo> emprestimo;
+	private String email;
+	private String senha;
 	
 	public Cliente() {
 		super();
 	}
 	
-	public Cliente(String nome, String endereco, Calendar nascimento, List<Emprestimo> emprestimo) {
+	public Cliente(String nome, String endereco, Calendar nascimento, List<Emprestimo> emprestimo, String email, String senha) {
 		super(nome);
 		this.endereco = endereco;
 		this.nascimento = nascimento;
 		this.emprestimo = emprestimo;
+		this.email = email;
+		this.senha = senha;
 	}
-	
+
 	public Cliente(String nome) {
 		super(nome);
+	}
+
+	public java.lang.String getEmail() {
+		return email;
+	}
+
+	public void setEmail(java.lang.String email) {
+		this.email = email;
+	}
+
+	public java.lang.String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(java.lang.String senha) {
+		this.senha = senha;
 	}
 	
 	public String getEndereco() {

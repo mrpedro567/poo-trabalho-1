@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Emprestimo {
 	private Cliente cliente;
-	private List<Livro> livros;
+	private Livro livro;
 	private Boolean concluido;
 	private Calendar dataRetorno;
 	private Float multaDia;
@@ -14,9 +14,9 @@ public class Emprestimo {
 		
 	}
 	
-	public Emprestimo(Cliente cliente, List<Livro> livros, Boolean concluido, Calendar dataRetorno, Float multaDia) {
+	public Emprestimo(Cliente cliente, Livro livro, Boolean concluido, Calendar dataRetorno, Float multaDia) {
 		this.cliente = cliente;
-		this.livros = livros;
+		this.livro = livro;
 		this.concluido = concluido;
 		this.dataRetorno = dataRetorno;
 		this.multaDia = multaDia;
@@ -28,11 +28,11 @@ public class Emprestimo {
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
-	public List<Livro> getLivros() {
-		return livros;
+	public Livro getLivro() {
+		return this.livro;
 	}
-	public void setLivros(List<Livro> livros) {
-		this.livros = livros;
+	public void setLivro(Livr livro {
+		this.livro = livro;
 	}
 	public Boolean getConcluido() {
 		return concluido;
@@ -47,7 +47,7 @@ public class Emprestimo {
 		this.dataRetorno = dataRetorno;
 	}
 	public Float getMultaDia() {
-		return multaDia;
+		return this.multaDia;
 	}
 	public void setMultaDia(Float multaDia) {
 		this.multaDia = multaDia;
