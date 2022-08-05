@@ -4,18 +4,18 @@ import java.util.Calendar;
 import java.util.List;
 
 
-public class Cliente extends Pessoa{
+public class Usuario extends Pessoa{
 	private String endereco;
 	private Calendar nascimento;
 	private List<Emprestimo> emprestimo;
 	private String email;
 	private String senha;
 	
-	public Cliente() {
+	public Usuario() {
 		super();
 	}
 	
-	public Cliente(String nome, String endereco, Calendar nascimento, List<Emprestimo> emprestimo, String email, String senha) {
+	public Usuario(String nome, String endereco, Calendar nascimento, List<Emprestimo> emprestimo, String email, String senha) {
 		super(nome);
 		this.endereco = endereco;
 		this.nascimento = nascimento;
@@ -24,7 +24,7 @@ public class Cliente extends Pessoa{
 		this.senha = senha;
 	}
 
-	public Cliente(String nome) {
+	public Usuario(String nome) {
 		super(nome);
 	}
 

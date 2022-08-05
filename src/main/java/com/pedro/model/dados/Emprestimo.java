@@ -4,7 +4,7 @@ import java.util.Calendar;
 import java.util.List;
 
 public class Emprestimo {
-	private Cliente cliente;
+	private Usuario usuario;
 	private Livro livro;
 	private Boolean concluido;
 	private Calendar dataRetorno;
@@ -15,7 +15,7 @@ public class Emprestimo {
 	}
 	
 	public Emprestimo(Cliente cliente, Livro livro, Boolean concluido, Calendar dataRetorno, Float multaDia) {
-		this.cliente = cliente;
+		this.usuario = cliente;
 		this.livro = livro;
 		this.concluido = concluido;
 		this.dataRetorno = dataRetorno;
@@ -23,10 +23,10 @@ public class Emprestimo {
 	}
 	
 	public Cliente getCliente() {
-		return cliente;
+		return usuario;
 	}
 	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
+		this.usuario = cliente;
 	}
 	public Livro getLivro() {
 		return this.livro;
