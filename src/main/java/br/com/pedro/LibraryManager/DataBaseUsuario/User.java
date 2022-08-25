@@ -9,7 +9,6 @@ import java.util.Date;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
     private String email;
     private String nome;
     private String senha;
@@ -17,14 +16,6 @@ public class User {
     private String rua;
     private String numero;
     private String cidade;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getEmail() {
         return email;

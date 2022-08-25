@@ -8,20 +8,10 @@ import javax.persistence.*;
 public class books {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
     private String titulo;
     private String edicao;
     private String autor;
     private Integer editora;
-
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getTitulo() {
         return titulo;
