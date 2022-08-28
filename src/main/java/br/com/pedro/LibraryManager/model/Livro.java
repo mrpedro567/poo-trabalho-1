@@ -1,27 +1,25 @@
-package br.com.pedro.LibraryManager.DataBaseLivro;
+package br.com.pedro.LibraryManager.model;
 
-import javax.persistence.*;
+import com.sun.istack.NotNull;
+
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
 
 @Entity
-@Table(name = "LivrosDataBase")
-
-public class books {
+@IdClass(LivroId.class)
+public class Livro {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @NotNull
     private String titulo;
+
+    @Id
+    @NotNull
     private String edicao;
+
     private String autor;
-    private Integer editora;
-
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    private String editora;
 
     public String getTitulo() {
         return titulo;
@@ -47,12 +45,11 @@ public class books {
         this.autor = autor;
     }
 
-    public Integer getEditora() {
+    public String getEditora() {
         return editora;
     }
 
-    public void setEditora(Integer editora) {
+    public void setEditora(String editora) {
         this.editora = editora;
     }
-
 }
