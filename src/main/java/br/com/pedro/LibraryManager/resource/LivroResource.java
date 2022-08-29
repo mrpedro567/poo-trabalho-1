@@ -5,10 +5,7 @@ import br.com.pedro.LibraryManager.model.LivroId;
 import br.com.pedro.LibraryManager.repository.LivroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -39,5 +36,12 @@ public class LivroResource {
         LivroId id = new LivroId(titulo, edicao);
         return (this.livroRepository.findById(id).get());
     }
+
+    @PostMapping
+    public List<Livro> insert(@RequestBody List<Livro> livros){
+        Iterable<Livro> response = this.livroRepository.saveAll(livros);
+        return StreamSupport.stream(response.spliterator(), false).collect(Collectors.toList());
+    }
+
 
 }
