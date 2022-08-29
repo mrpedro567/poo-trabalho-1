@@ -1,21 +1,25 @@
-package br.com.pedro.LibraryManager.DataBaseUsuario;
+package br.com.pedro.LibraryManager.model.dto;
 
-import javax.persistence.*;
-import java.util.Date;
-
-@Entity
-@Table(name = "UsuarioDataBase")
-
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class UsuarioDTO {
     private String email;
     private String nome;
     private String senha;
-    private Date nascimento;
+    private String nascimento;
+    private Long id;
     private String rua;
     private String numero;
     private String cidade;
+
+    public UsuarioDTO(String email, String nome, String senha, String nascimento, Long id, String rua, String numero, String cidade) {
+        this.email = email;
+        this.nome = nome;
+        this.senha = senha;
+        this.nascimento = nascimento;
+        this.id = id;
+        this.rua = rua;
+        this.numero = numero;
+        this.cidade = cidade;
+    }
 
     public String getEmail() {
         return email;
@@ -41,12 +45,20 @@ public class User {
         this.senha = senha;
     }
 
-    public Date getNascimento() {
+    public String getNascimento() {
         return nascimento;
     }
 
-    public void setNascimento(Date nascimento) {
+    public void setNascimento(String nascimento) {
         this.nascimento = nascimento;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getRua() {
@@ -72,5 +84,4 @@ public class User {
     public void setCidade(String cidade) {
         this.cidade = cidade;
     }
-
 }

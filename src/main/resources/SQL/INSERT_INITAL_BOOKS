@@ -1,0 +1,7 @@
+INSERT INTO LIVRO VALUES ('1', 'Harry Potter', 'J. K', 'QWE');
+INSERT INTO LIVRO VALUES ('2', 'Harry Potter', 'J. K', 'QWE');
+INSERT INTO LIVRO VALUES ('3', 'Harry Potter', 'J. K', 'QWE');
+INSERT INTO LIVRO VALUES ('4', 'Harry Potter', 'J. K', 'QWE');
+INSERT INTO LIVRO VALUES ('5', 'Harry Potter', 'J. K', 'QWE');
+INSERT INTO LIVRO VALUES ('6', 'Harry Potter', 'J. K', 'QWE');
+INSERT INTO LIVRO VALUES ('7', 'Harry Potter', 'J. K', 'QWE');
